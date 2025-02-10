@@ -1,0 +1,16 @@
+div{
+    text-align: center;
+}
+
+body{
+    background-image: url('montagne.jpg');
+}
+input, button {
+    width: 30%;
+    padding: 15px;
+    margin: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
+}

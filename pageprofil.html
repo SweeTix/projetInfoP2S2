@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="recherchefiltre.css">
+        <link rel="stylesheet" type="text/css" href="site.css">
     </head>
     <body>
         <div>
             <div>
-                <div class="barre_option">
-                    <div class="btn">
-                        <div class="text">L'ALPIN</div>
+                <div class="fond">
+                    <div class="navbar">
+                        <ul>
+                            <li><a href="accueil.html"><img src="logo.png" alt="Logo" width="100" height="100"></a></li>
+                            <li><a href="information.html">Information</a></li>
+                            <li><a href="rechercher.html">Rechercher</a></li>
+                        </ul>
+                        <ul>
+                            <li class="inscription"><a href="inscription.html">S'inscrire</a></li>
+                            <li class="connexion"><a href="connexion.html">Se connecter</a></li>
+                        </ul>
                     </div>
-                    <div class="btnbar">Nos voyages</div>
-                    <div class="btnbar">Nos activités</div>
-                    <div class="btnbar">Nos partenaires</div>
-                    <div class="btnbar">Compte</div>
-                    <div class="btnbar">Inscription</div>
-                    <div class="btnbar">?</div>
-                </div>
-            </div>
-            <div class="aligné">
-                <div class="bloc">
-                    <div class="empilé">
-                        <div class="text">BIENVENUE DANS VOTRE ESPACE</div>
-                        <img src="profil.png" class="logo1">
-                        <div class="btn">Mes voyages</div>
-                        <div class="btn">Messagerie</div>
-                        <div class="btn">Mes favoris</div>
-                        <div class="btn"> Mes infos persos</div>
-                    </div>
-                </div>
+            
+                    <div class="recherche">
+                        <form action="recherche.php" method="GET">
+                            <input type="search" name="q" placeholder="Rechercher..." required>
+                            <button type="submit">Rechercher</button>
+                        </form>
+                        </div>
+
+                        <div class="aligné">
+                            <div class="bloc">
+                                <div class="empilé">
+                                    <div class="text">BIENVENUE DANS VOTRE ESPACE</div>
+                                    <img src="profil.png" class="photodeprofil">
+                                    <div class="btn">Mes voyages</div>
+                                    <div class="btn">Messagerie</div>
+                                    <div class="btn">Mes favoris</div>
+                                    <div class="btn"> Mes infos persos</div>
+                                </div>
+                            </div>
+
             <div class="bloc3">
-                
-           
-                <div class="title"><b>VOTRE PROFIL</b></div>
+                <div class="profiltitle"><b>VOTRE PROFIL</b></div>
                 <div class="btn3">modifier la photo de profil</div> 
         <ul> 
             <li>
             <div class="aligné">
             <label for="nom"></label>
             <input type="text" id="nom" name="nom" placeholder="nom">
-            <button type="submit">modifier<img src="stylo.png" class="logo"></button>
+            <button type="submit">modifier<img src="stylo.png" class="stylo"></button>
             </div>
             </li>
 

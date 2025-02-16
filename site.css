@@ -252,7 +252,7 @@ a:visited {
 
 .formulaire{
     text-align: center;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     width: 30%;
     margin: auto;
     margin-top: 10%;
@@ -299,7 +299,7 @@ a:visited {
 
 .liste_util{
     text-align: center;
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 25px;
     width: 90%;
     margin: auto;

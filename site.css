@@ -13,6 +13,8 @@ a:visited {
     color: white;
 }
 
+/* ----------------- ANTOINE ------------------ */
+
 /* Navbar */
 
 .navbar {
@@ -239,4 +241,98 @@ a:visited {
 
 .info p {
     margin : 0px 25px;
+}
+
+
+/* ----------------- TOM ------------------ */
+
+
+.formulaire{
+    text-align: center;
+    font-family: arial;
+    width: 30%;
+    margin: auto;
+    margin-top: 10%;
+    color: rgb(255, 205, 96);
+    background-color: rgba(9, 52, 28,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+.formulaire h1{
+    font-size:45px;
+}
+
+.formulaire input,button{
+    font-size: 30px;
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.formulaire button{
+    margin: 10px 20px 30px 20px;
+    font-size: 25px;
+    background-color: rgb(255, 205, 96);
+    color:white;
+}
+
+.formulaire input{
+    margin: 20px 20px 10px 20px;
+    font-size: 20px;
+}
+
+.utilisateur{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.liste_util{
+    text-align: center;
+    font-family: Arial;
+    padding: 25px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(9, 52, 28,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+.liste_util h1{
+    color:rgb(255, 205, 96);
+    font-size: 45px;
+}
+
+.liste_util table{
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.liste_util th, td{
+    font-size:18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+.liste_util th{
+    background-color: rgb(255, 205, 96);
+    color: white;
+    text-align: center;
+}
+
+.vip:hover{
+    color:rgb(255, 205, 96);
+}
+
+.ban:hover{
+    color:rgb(255, 205, 96);
 }

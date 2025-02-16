@@ -317,13 +317,14 @@ a:visited {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-color: #000;
     border-radius: 8px;
 }
 .liste_util th, .liste_util td{
     font-size:18px;
     padding: 10px;
-    border: 1px solid #ddd;
     vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .liste_util th{
     background-color: rgb(255, 205, 96);
@@ -331,12 +332,22 @@ a:visited {
     text-align: center;
 }
 
-.vip:hover{
+.vip, .ban{
+    font-size: 25px;
+    border-radius: 8px;
+    border-color: rgb(255, 205, 96);
+    background-color: white;
     color:rgb(255, 205, 96);
 }
 
+.vip:hover{
+    color:white;
+    background-color: rgb(255, 205, 96);
+}
+
 .ban:hover{
-    color:rgb(255, 205, 96);
+    color:white;
+    background-color: rgb(255, 205, 96);
 }
 
 

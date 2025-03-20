@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Rechercher</title>
-    <link rel="stylesheet" href="site.css">
+	<link rel="stylesheet" type="text/css" href="site.css">
 </head>
 <body>
-        <div class="fond">
+    <div class="fond">
         <div class="navbar">
             <ul>
                 <li><a href="accueil.html"><img src="logo.png" alt="Logo" width="100" height="100"></a></li>
@@ -24,110 +24,98 @@
                 <input type="search" name="q" placeholder="Rechercher..." required>
                 <button type="submit">Rechercher</button>
             </form>
-            </div>
+        </div>
            
 
+        <div class="filtre">
+            <ul>
+                <li>
+                    <label for="region">Région :</label>
+                    <select id="region" name="region">
+                        <option value="region">-------Région-------</option>
+                        <option value="alpes">Alpes</option>
+                        <option value="pyrenees">Pyrénées</option>
+                        <option value="himalaya">Himalaya</option>
+                        <option value="oural">Oural</option>
+                        <option value="caucase">Caucase</option>
+                        <option value="rocheuses">Rocheuses</option>
+                        <option value="andes">Andes</option>
+                        <option value="appalaches">Appalaches</option>
+                        <option value="carpates">Carpates</option>
+                        <option value="atlas">Atlas</option>
+                        <option value="alpes-japonaises">Alpes Japonaises</option>
+                        <option value="alpes-sud">Alpes du Sud</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="formule">Formule :</label>
+                    <select id="formule" name="formule">
+                        <option value="formule">---Formule---</option>
+                        <option value="logement">Logement</option>
+                        <option value="activites">Activités</option>
+                        <option value="voyage">Voyage</option>
+                        <option value="all">All Inclusive</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="depart">Départ :</label>
+                    <input type="date" name="depart">
+                </li>
+                <li>
+                    <label for="retour">Retour :</label>
+                    <input type="date" name="retour">
+                </li>
+                <li>
+                    <label for="prix">Prix :</label>
+                    <input type="range" name="prix" min="0" max="10000" step="100" value="5000">
+                    <span id="valeurPrix">500</span> €
+                </li>
+            </ul>
+        </div>
 
 
-<div class="filterbox">
-    <ul>
-        <li>
-            <div class="dropdown">
-                <span>régions</span>
-                <div class="dropdown-content">
-                    <div class="btn"><p>option1</p></div>
-                    <div class="btn"><p>option1</p></div>
-                    <div class="btn"><p>option2</p></div>
-                    <div class="btn"><p>option3</p></div>
-                    <div class="btn"><p>option4</p></div>
-                </div>
+
+        <div class="annonces-container">
+            <div class="annonce">
+                <button><img src="montagne2.jpg" alt="Voyage 1"></button>
+                <p>(nom + description)</p>
             </div>
-        </li>
-
-        <li>
-            <div class="dropdown">
-                <span>formule</span>
-                <div class="dropdown-content">
-                    <div class="btn"><p>option1</p></div>
-                    <div class="btn"><p>option1</p></div>
-                    <div class="btn"><p>option2</p></div>
-                    <div class="btn"><p>option3</p></div>
-                    <div class="btn"><p>option4</p></div>
-                </div>
+        
+            <div class="annonce">
+                <button><img src="montagne2.jpg" alt="Voyage 2"></button>
+                <p>(nom + description)</p>
             </div>
-        </li>
-
-        <li>
-            <div class="dropdown">
-                <span>date de départ</span>
-                <div class="dropdown-content">
-                    <label for="date-picker"></label>
-                    <input type="date" id="date-picker">
-                </div>
+            <div class="annonce">
+                <button><img src="montagne2.jpg" alt="Voyage 3"></button>
+                <p>(nom + description)</p>
             </div>
-        </li>
-
-        <li>
-            <div class="dropdown">
-                <span>date de retour</span>
-                <div class="dropdown-content">
-                    <label for="date-picker"></label>
-                    <input type="date" id="date-picker">
-                </div>
+            <div class="annonce">
+                <button><img src="montagne2.jpg" alt="Voyage 3"></button>
+                <p>(nom + description)</p>
             </div>
-        </li>
-
-        <li>
-            <div class="dropdown">
-                <span>prix</span>
-                <div class="dropdown-content">
-                    <div class="btn"><p>option1</p></div>
-                    <div class="btn"><p>option1</p></div>
-                    <div class="btn"><p>option2</p></div>
-                    <div class="btn"><p>option3</p></div>
-                    <div class="btn"><p>option4</p></div>
-                </div>
+            <div class="annonce">
+                <button><img src="montagne2.jpg" alt="Voyage 3"></button>
+                <p>(nom + description)</p>
             </div>
-        </li>
-    </ul>
-</div>
+            <div class="annonce">
+                <button><img src="montagne2.jpg" alt="Voyage 3"></button>
+                <p>(nom + description)</p>
+            </div>
+        </div>
 
-<div class="annonces-container">
-      <div class="annonce">
-      <button><img src="montagne2.jpg" alt="Voyage 1"></button>
-        <p>(nom + description)</p>
-    </div>
-   
-    <div class="annonce">
-        <button><img src="montagne2.jpg" alt="Voyage 2"></button>
-        <p>(nom + description)</p>
-    </div>
-    <div class="annonce">
-        <button><img src="montagne2.jpg" alt="Voyage 3"></button>
-        <p>(nom + description)</p>
-    </div>
-    <div class="annonce">
-        <button><img src="montagne2.jpg" alt="Voyage 3"></button>
-        <p>(nom + description)</p>
-    </div>
-    <div class="annonce">
-        <button><img src="montagne2.jpg" alt="Voyage 3"></button>
-        <p>(nom + description)</p>
-    </div>
-    <div class="annonce">
-       <button><img src="montagne2.jpg" alt="Voyage 3"></button>
-        <p>(nom + description)</p>
-    </div>
-</div>
+        <div class="swpage">
+            <button><img src="p2.png"></button>
+            <p>Page 1/4</p>
+            <button><img src="p1.png"></button>
+        </div>
 
-<div class="swpage">
-<button> <img src="p2.png"> </button>
-<p>  page 1/4</p>
-<button><img src="p1.png"></button>
-</div>
-</div>
+    </div>
 
-
+    <div class="info">
+        <p>Nous contacter : +33 1 23 45 67 89</p>
+        <p>Mail : trek-peaks@gmail.com</p>
+        <p>Siège : 1 Pl. Samuel de Champlain, La Défense, 92400 Courbevoie</p>
+    </div>
 
 </body>
 </html>

@@ -7,9 +7,10 @@ if (file_exists($file) && filesize($file) > 0) {
     $lignes = file($file, FILE_IGNORE_NEW_LINES);
 
     foreach ($lignes as $ligne) {
-        list($login, $mail, $mdp, $statut) = explode(";", $ligne);
+        list($nom, $prenom, $adresse, $mail, $mdp, $statut) = explode(";", $ligne);
         $utilisateurs[] = [
-            'login' => $login,
+            'nom' => $nom,
+            'prenom' => $prenom,
             'mail' => $mail,
             'mdp' => $mdp,
             'statut' => $statut
@@ -44,7 +45,8 @@ if (file_exists($file) && filesize($file) > 0) {
                 <table>
                     <tr> 
                         <th>N°</th>
-                        <th>Login</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
                         <th>Email</th>
                         <th>Mdp</th>
                         <th>Statut</th>
@@ -54,7 +56,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i])) {
                                 echo "<td>" . $i+1 . "</td>";
-                                echo "<td>" . $utilisateurs[$i]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['statut'] . "</td>";
@@ -62,7 +65,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+1 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -70,7 +73,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+1])) {
                                 echo "<td>" . $i+2 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+1]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+1]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+1]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['statut'] . "</td>";
@@ -78,7 +82,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+2 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -86,7 +90,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+2])) {
                                 echo "<td>" . $i+3 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+2]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+2]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+2]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['statut'] . "</td>";
@@ -94,7 +99,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+3 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -102,7 +107,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+3])) {
                                 echo "<td>" . $i+4 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+3]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+3]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+3]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['statut'] . "</td>";
@@ -110,7 +116,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+4 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -118,7 +124,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+4])) {
                                 echo "<td>" . $i+5 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+4]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+4]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+4]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['statut'] . "</td>";
@@ -126,7 +133,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+5 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -134,7 +141,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+5])) {
                                 echo "<td>" . $i+6 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+5]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+5]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+5]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['statut'] . "</td>";
@@ -142,7 +150,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+6 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -150,7 +158,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+6])) {
                                 echo "<td>" . $i+7 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+6]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+6]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+6]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['statut'] . "</td>";
@@ -158,7 +167,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+7 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -166,7 +175,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+7])) {
                                 echo "<td>" . $i+8 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+7]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+7]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+7]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['statut'] . "</td>";
@@ -174,7 +184,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+8 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -182,7 +192,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+8])) {
                                 echo "<td>" . $i+9 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+8]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+8]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+8]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['statut'] . "</td>";
@@ -190,7 +201,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+9 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>
@@ -198,7 +209,8 @@ if (file_exists($file) && filesize($file) > 0) {
                         <?php
                             if (isset($utilisateurs[$i+9])) {
                                 echo "<td>" . $i+10 . "</td>";
-                                echo "<td>" . $utilisateurs[$i+9]['login'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+9]['nom'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+9]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['mail'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['statut'] . "</td>";
@@ -206,7 +218,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td><button class='ban'>Bannir</button>";
                             } else {
                                 echo "<td>" . $i+10 . "</td>";
-                                echo "<td colspan='6'>&nbsp;</td>";
+                                echo "<td colspan='7'>&nbsp;</td>";
                             }
                         ?>
                     </tr>

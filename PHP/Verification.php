@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $fichier = "inscrit.csv";
+    $fichier = "utilisateur.csv";
     $lignes = [];
     $utilisateur = [];
 

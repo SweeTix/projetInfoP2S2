@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Page Inscription Réussie</title>
-        <link rel="stylesheet" type="text/css" href="SiteVrsTom.css">
+        <link rel="stylesheet" type="text/css" href="inscription_reussie.css">
     </head>
     <body>
         <div class="navbar">
@@ -26,7 +26,7 @@
                 <h1><?php echo "$chaine"?></h1>
                 <p>Vous pouvez maintent vous connectez, cliquer sur le bouton ci-dessous</p>
                 <br>
-                <button style="padding: 15px; border-radius: 8px; border: 1px solid #000; margin: 10px 20px 30px 20px; font-size: 36px; background-color: rgb(255, 205, 96);"><a href="connexion.html">Connexion</a></button>
+                <button><a href="connexion.php">Connexion</a></button>
             </div>
         </div>
         <div class="info">

@@ -1,0 +1,242 @@
+/* Réglages de base */
+body {
+    margin: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(9, 52, 28, 1);
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    list-style-type: none;
+}
+
+.navbar li {
+	height: 40px;
+	margin: 20px 15px 20px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex; 
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a:hover {
+    color: rgb(255, 205, 96);
+}
+
+.connexion {
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.connexion:hover {
+    border: 2px solid rgb(255, 205, 96);
+}
+
+/* Image de fond */
+
+.fond {
+    padding-top: 20px;
+    background-image: url('montagne2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 120vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Barre d'information */
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(9, 52, 28, 1);
+    color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.info p {
+    margin : 0px 25px;
+}
+
+/* recherche */
+
+.recherche form {
+	display: flex;
+	width: 800px;
+	margin: 70px auto;
+}
+
+.recherche input[type="search"] {
+	flex: 1;
+	width: 600px;
+	height: 60px;
+	padding: 8px;
+	border: 1px solid rgba(9, 52, 28, 1);
+	border-radius: 5px 0 0 5px;
+}
+
+.recherche button {
+	padding: 8px;
+	height: 60px;
+	background-color: rgb(255, 205, 96, 1);
+	color: white;
+	border: 1px solid rgba(255, 205, 96, 1);
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+.recherche button:hover {
+	background-color: rgba(9, 52, 28, 1);
+	border: 1px solid rgba(9, 52, 28, 1);
+}
+
+.filtre {
+    width: fit-content;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.filtre ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+.filtre ul li {
+    padding: 0px 25px;
+}
+
+.filtre select {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.filtre input[type="date"] {
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.filtre input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 4px;
+    background: #ffcd60;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filtre input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #09341c;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.annonces-container {
+    margin: 60px 0px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.annonce {
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.annonce img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.annonce p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000;
+}
+
+.annonce button{
+    cursor: pointer;
+    border: none;
+    background-color: #0000;
+}
+
+.annonce button:hover{
+    transform: scale(1.1);
+}
+
+.swpage{
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+    border-radius: 25px;
+    justify-content: center;
+}
+
+.swpage button{
+    background-color: #0000;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+.swpage button:hover{
+    transform: scale(1.5);
+}
+
+.swpage img{
+    height: 50px;
+    width: 50px;  
+}

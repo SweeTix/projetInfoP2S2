@@ -7,13 +7,14 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
+        $naissance = $_POST['naissance'];
         $adresse = $_POST['adresse'];
         $email = $_POST['email'];
         $mdp = $_POST['mdp'];
         $statut = "utilisateur";
 
-        if(!empty($nom) && !empty($prenom) && !empty($adresse) && !empty($email) && !empty($mdp) && !empty($statut)){
-            $donneeUtilisateur = "$nom;$prenom;$adresse;$email;$mdp;$statut"."\n";
+        if(!empty($nom) && !empty($prenom) && !empty($naissance) && !empty($adresse) && !empty($email) && !empty($mdp) && !empty($statut)){
+            $donneeUtilisateur = "$nom;$prenom;$naissance;$adresse;$email;$mdp;$statut"."\n";
             if(!file_exists($fichier)){
                 file_put_contents($fichier, "");
             }

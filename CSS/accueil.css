@@ -1,0 +1,246 @@
+/* Réglages de base */
+body {
+    margin: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+/* navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(9, 52, 28, 1);
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    list-style-type: none;
+}
+
+.navbar li {
+	height: 40px;
+	margin: 20px 15px 20px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex; 
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a:hover {
+    color: rgb(255, 205, 96);
+}
+
+.connexion {
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.connexion:hover {
+    border: 2px solid rgb(255, 205, 96);
+}
+
+/* Image de fond */
+
+.fond {
+    padding-top: 20px;
+    background-image: url('montagne2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 120vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Barre d'information */
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(9, 52, 28, 1);
+    color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.info p {
+    margin : 0px 25px;
+}
+
+/* accueil */
+
+.titre {
+    justify-content: center;
+    align-items: center;
+    margin: 250px auto;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.titre h1 {
+    margin:0px; 
+    color: rgb(255, 205, 96);
+    font-size: 90px; 
+}
+
+.titre p {
+    margin: 0px; 
+    color: white;
+    font-size: 36px;
+}
+
+.recherche form {
+	display: flex;
+	width: 800px;
+	margin: 70px auto;
+}
+
+.recherche input[type="search"] {
+	flex: 1;
+	width: 600px;
+	height: 60px;
+	padding: 8px;
+	border: 1px solid rgba(9, 52, 28, 1);
+	border-radius: 5px 0 0 5px;
+}
+
+.recherche button {
+	padding: 8px;
+	height: 60px;
+	background-color: rgb(255, 205, 96, 1);
+	color: white;
+	border: 1px solid rgba(255, 205, 96, 1);
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+.recherche button:hover {
+	background-color: rgba(9, 52, 28, 1);
+	border: 1px solid rgba(9, 52, 28, 1);
+}
+
+
+/* Explication du site */
+
+.content {
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.separateur {
+    height: auto;
+    font-size: 50px;
+    color: rgba(9, 52, 28, 1);
+}
+
+.case {
+    display: flex;
+    margin: 25px auto;
+    background-color: white;
+    width: 70%;
+    height: 150px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.case img {
+    margin: 5px;
+    width: 20%;
+}
+
+.case p {
+    text-align: justify;
+    margin: auto 10px;
+    width: 80%;
+}
+
+.content h1 {
+    color: rgba(9, 52, 28, 1);
+}
+
+/* Carte */
+
+.destinations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carte {
+    position: relative;
+    width: 1025px;
+    height: 845px;
+    background-image: url('carte.png');
+    border: 2px solid #000;
+}
+
+.point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 205, 96);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.point::after {
+    content: attr(data-name);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.point:hover::after {
+    opacity: 1;
+}
+
+.point.alpes {top: 41%; left: 48.5%;}
+.point.pyrenees {top: 42.5%; left: 46.5%;}
+.point.himalaya {top: 48.5%; left: 70%;}
+.point.oural {top: 33%; left: 63%;}
+.point.caucase {top: 41.5%; left: 58.5%;}
+.point.rocheuses {top: 42%; left: 14%;}
+.point.andes {top: 64%; left: 27%;}
+.point.appalaches {top: 43%; left: 25%;}
+.point.carpates {top: 41%; left: 53.5%;}
+.point.atlas {top: 47%; left: 46%;}
+.point.alpes-japonaises {top: 45%; left: 85%;}
+.point.alpes-sud {top: 75%; left: 93.5%;}

@@ -18,7 +18,7 @@
             </ul>
             <ul>
                 <li class="inscription"><a href="inscription.html">S'inscrire</a></li>
-                <li class="connexion"><a href="connexion.php">Se connecter</a></li>
+                <li><a href="pageprofil.php"><img src="profil.png" alt="Profil" width="80" height="80"></a></li>
             </ul>
         </div>
         <div class="fond">

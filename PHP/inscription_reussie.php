@@ -12,12 +12,17 @@
     <body>
         <div class="navbar">
             <ul>
-                <li><a href="accueil.html"><img src="logo.png" alt="Logo" width="100" height="100"></a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="rechercher.html">Rechercher</a></li>
+                <li><a href="accueil.php"><img src="logo.png" alt="Logo" width="100" height="100"></a></li>
+                <li><a href="information.php">Information</a></li>
+                <li><a href="rechercher.php">Rechercher</a></li>
             </ul>
             <ul>
-                <li class="inscription"><a href="inscription.html">S'inscrire</a></li>
+                <?php
+                    if(isset($_SESSION['user_statut']) && $_SESSION['user_statut'] == 'admin'){
+                        echo '<li><a href="administrateur.php">Admin</a></li>';
+                    }
+                ?>
+                <li class="inscription"><a href="inscription.php">S'inscrire</a></li>
                 <li><a href="pageprofil.php"><img src="profil.png" alt="Profil" width="80" height="80"></a></li>
             </ul>
         </div>

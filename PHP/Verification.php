@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $fichier = "utilisateur.csv";
+    $fichier = "utilisateurs.csv";
     $lignes = [];
     $utilisateur = [];
 
@@ -19,7 +19,14 @@
                 if($email === $utilisateur[4]){
 
                     if($mdp === $utilisateur[5]){
-                        if($utilisateur[5] === "admin"){
+                        if($utilisateur[6] === "admin"){
+                            $_SESSION['user_name'] = $utilisateur[0];
+                            $_SESSION['user_firstname'] = $utilisateur[1];
+                            $_SESSION['user_birth'] = $utilisateur[2];
+                            $_SESSION['user_address'] = $utilisateur[3];
+                            $_SESSION['user_email'] = $utilisateur[4];
+                            $_SESSION['user_password'] = $utilisateur[5];
+                            $_SESSION['user_statut'] = $utilisateur[6];
                             header("location: administrateur.php");
                             exit();
                         }

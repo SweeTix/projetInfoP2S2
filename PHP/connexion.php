@@ -1,12 +1,13 @@
 <?php
-$erreur = "";
-if (isset($_GET['erreur'])) {
-    if ($_GET['erreur'] == "mdp_incorrect") {
-        $erreur = "Mot de passe incorrect. Veuillez réessayer.";
-    } elseif ($_GET['erreur'] == "mauvais_email") {
-        $erreur = "Adresse mail introuvable. Veuillez réessayer.";
+    session_start();
+    $erreur = "";
+    if (isset($_GET['erreur'])) {
+        if ($_GET['erreur'] == "mdp_incorrect") {
+            $erreur = "Mot de passe incorrect. Veuillez réessayer.";
+        } elseif ($_GET['erreur'] == "mauvais_email") {
+            $erreur = "Adresse mail introuvable. Veuillez réessayer.";
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ if (isset($_GET['erreur'])) {
             <ul>
                 <?php
                     if(isset($_SESSION['user_statut'])){
-                        echo '<li><a href="panier.php"><img src="panier.png" alt="Panier" width="80" height="80"></a></li>';
+                        echo '<li><a href="panier.php"><img src="panier.png" alt="Panier" width="30" height="30"></a></li>';
                     }
                     if(isset($_SESSION['user_statut']) && $_SESSION['user_statut'] == 'admin'){
                         echo '<li><a href="administrateur.php">Admin</a></li>';

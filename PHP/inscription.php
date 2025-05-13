@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,7 +19,7 @@
             <ul>
                 <?php
                     if(isset($_SESSION['user_statut'])){
-                        echo '<li><a href="panier.php"><img src="panier.png" alt="Panier" width="80" height="80"></a></li>';
+                        echo '<li><a href="panier.php"><img src="panier.png" alt="Panier" width="30" height="30"></a></li>';
                     }
                     if(isset($_SESSION['user_statut']) && $_SESSION['user_statut'] == 'admin'){
                         echo '<li><a href="administrateur.php">Admin</a></li>';

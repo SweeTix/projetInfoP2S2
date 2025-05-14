@@ -29,7 +29,19 @@
             </ul>
         </div>
         <div class="fond">
-                
+            <div class="pagepanier">
+                <div class="avancee">
+                    <h1>1 ----------------------- 2 ---------------------- 3</h1>
+                </div>
+                <div class="block">
+                    <div class="panier">
+                        <h1>Panier</h1>
+                    </div>
+                    <div class="paiement">
+                        <h1>Paiement</h1>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="info">
             <p>Nous contacter : +33 1 23 45 67 89</p>

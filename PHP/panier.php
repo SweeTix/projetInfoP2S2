@@ -36,9 +36,13 @@
                 <div class="block">
                     <div class="panier">
                         <h1>Panier</h1>
+                        <p>Votre panier est vide</p>
+                        <button><a href="rechercher.php">Découvrir des voyages</a></button>
                     </div>
                     <div class="paiement">
                         <h1>Paiement</h1>
+                        <p>Prix</p>
+                        <button><a href="paiemant.php">Payer</a></button>
                     </div>
                 </div>
             </div>

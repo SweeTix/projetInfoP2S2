@@ -4,25 +4,11 @@ if(!isset($_SESSION['user_email'])){
     header("location: connexion.php");
     exit();
 }
-$file = "utilisateurs.csv";
-$utilisateurs = [];
+$file = "utilisateurs.json";
+$contenu = file_get_contents($file);
+$utilisateurs = json_decode($contenu, true);
+
 $i = isset($_GET['i']) ? (int)$_GET['i'] : 0;
-
-if (file_exists($file) && filesize($file) > 0) {
-    $lignes = file($file, FILE_IGNORE_NEW_LINES);
-
-    foreach ($lignes as $ligne) {
-        list($nom, $prenom, $naissance, $adresse, $mail, $mdp, $statut) = explode(";", $ligne);
-        $utilisateurs[] = [
-            'nom' => $nom,
-            'prenom' => $prenom,
-            'naissance' => $naissance,
-            'mail' => $mail,
-            'mdp' => $mdp,
-            'statut' => $statut
-        ];
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +60,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -92,7 +78,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+1]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+1]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+1]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+1]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -110,7 +96,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+2]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+2]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+2]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+2]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -128,7 +114,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+3]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+3]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+3]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+3]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -146,7 +132,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+4]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+4]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+4]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+4]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -164,7 +150,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+5]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+5]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+5]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+5]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -182,7 +168,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+6]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+6]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+6]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+6]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -200,7 +186,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+7]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+7]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+7]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+7]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -218,7 +204,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+8]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+8]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+8]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+8]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";
@@ -236,7 +222,7 @@ if (file_exists($file) && filesize($file) > 0) {
                                 echo "<td>" . $utilisateurs[$i+9]['nom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['prenom'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['naissance'] . "</td>";
-                                echo "<td>" . $utilisateurs[$i+9]['mail'] . "</td>";
+                                echo "<td>" . $utilisateurs[$i+9]['email'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['mdp'] . "</td>";
                                 echo "<td>" . $utilisateurs[$i+9]['statut'] . "</td>";
                                 echo "<td><button class='vip'>VIP</button>";

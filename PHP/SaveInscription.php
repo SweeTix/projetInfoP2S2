@@ -1,40 +1,54 @@
 <?php
-    session_start();
-    $fichier = "utilisateurs.csv";
-    $lignes = [];
-    $utilisateur = [];
+session_start();
+$fichier = "utilisateurs.json";
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
-        $naissance = $_POST['naissance'];
-        $adresse = $_POST['adresse'];
-        $email = $_POST['email'];
-        $mdp = $_POST['mdp'];
-        $statut = "utilisateur";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $naissance = $_POST['naissance'];
+    $adresse = $_POST['adresse'];
+    $email = $_POST['email'];
+    $mdp = $_POST['mdp'];
+    $statut = "utilisateur";
 
-        if(!empty($nom) && !empty($prenom) && !empty($naissance) && !empty($adresse) && !empty($email) && !empty($mdp) && !empty($statut)){
-            $donneeUtilisateur = "$nom;$prenom;$naissance;$adresse;$email;$mdp;$statut"."\n";
-            if(!file_exists($fichier)){
-                file_put_contents($fichier, "");
-            }
-            
-            $lignes = file($fichier, FILE_IGNORE_NEW_LINES);
-            foreach($lignes as $ligne){
-                $utilisateur = explode(";", $ligne);
-                if($email == $utilisateur[3]){
-                    $_SESSION['chaine'] = "Vous avez déjà un compte";
-                    session_write_close();
-                    header("location: inscription_reussie.php");
-                    exit();
-                }
-            }
+    if (!empty($nom) && !empty($prenom) && !empty($naissance) && !empty($adresse) && !empty($email) && !empty($mdp)) {
+        $donnees = [
+            "nom" => $nom,
+            "prenom" => $prenom,
+            "naissance" => $naissance,
+            "adresse" => $adresse,
+            "email" => $email,
+            "mdp" => $mdp,
+            "statut" => $statut
+        ];
 
-            file_put_contents($fichier,$donneeUtilisateur, FILE_APPEND);
-            $_SESSION['chaine'] = "Inscription réussie";
-            session_write_close();
-            header("location: inscription_reussie.php");
-            exit();
+        if (!file_exists($fichier)) {
+            file_put_contents($fichier, "[]");
         }
+
+        $contenu = file_get_contents($fichier);
+        $utilisateurs = json_decode($contenu, true);
+
+        if (!is_array($utilisateurs)) {
+            $utilisateurs = [];
+        }
+
+        foreach ($utilisateurs as $utilisateur) {
+            if (isset($utilisateur["email"]) && $email == $utilisateur["email"]) {
+                $_SESSION['chaine'] = "Vous avez déjà un compte";
+                session_write_close();
+                header("location: inscription_reussie.php");
+                exit();
+            }
+        }
+
+        $utilisateurs[] = $donnees;
+        file_put_contents($fichier, json_encode($utilisateurs, JSON_PRETTY_PRINT));
+
+        $_SESSION['chaine'] = "Inscription réussie";
+        session_write_close();
+        header("location: inscription_reussie.php");
+        exit();
     }
+}
 ?>

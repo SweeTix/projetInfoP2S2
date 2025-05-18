@@ -13,7 +13,87 @@
         <link rel="stylesheet" type="text/css" href="profil.css">
     </head>
     <body>
+        <style>
+            input[readonly] {
+                color: white;
+                border-color: rgba(118, 118, 118, 0.3);
+                background-color: rgba(239, 239, 239, 0.3);
+            }
 
+            input.editable {
+                color: black;
+            }
+
+            .profil label{
+                color: white;
+                font-size: 30px;
+            }
+
+            .profil input{
+                font-size: 30px;
+                border-radius: 8px;
+            }
+            .profil button{
+                background-color: transparent;
+                border: none;
+            }
+
+            .profil button{
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0);
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 8px;
+                width: 200px;
+                height: 60px;
+                font-size: 22px;
+                padding: 15px;
+                border: 1px solid #000;
+            }
+
+        </style>
+        <script>
+            function editField(id) {
+                const input = document.getElementById(id);
+                input.readOnly = false;
+                input.classList.add("editable");
+
+                toggleButtons(id, true);
+            }
+
+            function validateField(id) {
+                const input = document.getElementById(id);
+                input.readOnly = true;
+                input.classList.remove("editable");
+
+                if (input.value !== input.dataset.original) {
+                    input.dataset.modified = "true";
+                }
+
+                checkSubmitVisible();
+                toggleButtons(id, false);
+            }
+
+            function cancelField(id) {
+                const input = document.getElementById(id);
+                input.value = input.dataset.original;
+                input.readOnly = true;
+                input.classList.remove("editable");
+
+                toggleButtons(id, false);
+            }
+
+            function toggleButtons(id, editing) {
+                document.querySelector(`#field-${id} button[onclick^="editField"]`).hidden = editing;
+                document.querySelector(`#field-${id} button[onclick^="validateField"]`).hidden = !editing;
+                document.querySelector(`#field-${id} button[onclick^="cancelField"]`).hidden = !editing;
+            }
+
+            function checkSubmitVisible() {
+                const inputs = document.querySelectorAll('input[data-modified="true"]');
+                document.getElementById('submitBtn').hidden = inputs.length === 0;
+            }
+        </script>
         <div class="navbar">
             <ul>
                 <li><a href="accueil.php"><img src="logo.png" alt="Logo" width="100" height="100"></a></li>
@@ -49,13 +129,55 @@
                 <div class="profil">
                     <br>
                     <h1 style="margin-top: 0px;">VOTRE PROFIL</h1>
-                    <p>Nom : <?php echo $_SESSION['user_name']?></p>
-                    <p>Prénom : <?php echo $_SESSION['user_firstname']?></p>
-                    <p>Naissance : <?php echo $_SESSION['user_birth']?></p>
-                    <p>Adresse : <?php echo $_SESSION['user_address']?></p>
-                    <p>E-mail : <?php echo $_SESSION['user_email']?></p>
-                    <p>Statut : <?php echo $_SESSION['user_statut']?></p>
-                    <button class="modifier">Modifier mon profil</button>
+                    <form method="POST" action="modif_profil.php">
+                        <div class="field" id="field-username">
+                            <label for="username">Nom d'utilisateur</label>
+                            <input type="text" id="username" name="username" value="<?= isset($_SESSION["user_name"]) ? htmlspecialchars($_SESSION["user_name"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_name"] ?? '') ?>">
+                            <button type="button" onclick="editField('username')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
+                            <button type="button" onclick="validateField('username')" hidden>Valider</button>
+                            <button type="button" onclick="cancelField('username')" hidden>Annuler</button>
+                        </div>
+                        <div class="field" id="field-firstname">
+                            <label for="firstname">Prénom</label>
+                            <input type="firstname" id="firstname" name="firstname" value="<?= isset($_SESSION["user_firstname"]) ? htmlspecialchars($_SESSION["user_firstname"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_firstname"] ?? '') ?>">
+                            <button type="button" onclick="editField('firstname')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
+                            <button type="button" onclick="validateField('firstname')" hidden>Valider</button>
+                            <button type="button" onclick="cancelField('firstname')" hidden>Annuler</button>
+                        </div>
+                        <div class="field" id="field-birth">
+                            <label for="birth">Date de naissance</label>
+                            <input type="date" id="birth" name="birth" value="<?= isset($_SESSION["user_birth"]) ? htmlspecialchars($_SESSION["user_birth"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_birth"] ?? '') ?>">
+                            <button type="button" onclick="editField('birth')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
+                            <button type="button" onclick="validateField('birth')" hidden>Valider</button>
+                            <button type="button" onclick="cancelField('birth')" hidden>Annuler</button>
+                        </div>
+                        <div class="field" id="field-address">
+                            <label for="address">Adresse</label>
+                            <input type="text" id="address" name="address" value="<?= isset($_SESSION["user_address"]) ? htmlspecialchars($_SESSION["user_address"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_address"] ?? '') ?>">
+                            <button type="button" onclick="editField('address')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
+                            <button type="button" onclick="validateField('address')" hidden>Valider</button>
+                            <button type="button" onclick="cancelField('address')" hidden>Annuler</button>
+                        </div>
+                        <div class="field" id="field-email">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" value="<?= isset($_SESSION["user_email"]) ? htmlspecialchars($_SESSION["user_email"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_email"] ?? '') ?>">
+                            <button type="button" onclick="editField('email')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
+                            <button type="button" onclick="validateField('email')" hidden>Valider</button>
+                            <button type="button" onclick="cancelField('email')" hidden>Annuler</button>
+                        </div>
+                        <div class="field" id="field-password">
+                            <label for="password">Nom d'utilisateur</label>
+                            <input type="password" id="password" name="password" value="<?= isset($_SESSION["user_password"]) ? htmlspecialchars($_SESSION["user_password"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_password"] ?? '') ?>">
+                            <button type="button" onclick="editField('password')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
+                            <button type="button" onclick="validateField('password')" hidden>Valider</button>
+                            <button type="button" onclick="cancelField('password')" hidden>Annuler</button>
+                        </div>
+                        <div>
+                            <label for="statut">Statut</label>
+                            <input type="text" id="statut" name="statut" value="<?= htmlspecialchars($_SESSION["user_statut"])?>" disabled>
+                        </div>
+                        <button id="submitBtn" type="submit" hidden>Soumettre</button>
+                    </form>
                 </div>
             </div>
         </div>

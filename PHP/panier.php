@@ -20,9 +20,6 @@
                     if(isset($_SESSION['user_statut'])){
                         echo '<li><a href="panier.php"><img src="panier.png" alt="Panier" width="30" height="30"></a></li>';
                     }
-                    if(isset($_SESSION['user_statut']) && $_SESSION['user_statut'] == 'admin'){
-                        echo '<li><a href="administrateur.php">Admin</a></li>';
-                    }
                 ?>
                 <li class="inscription"><a href="inscription.php">S'inscrire</a></li>
                 <li><a href="pageprofil.php"><img src="profil.png" alt="Profil" width="80" height="80"></a></li>
@@ -31,7 +28,7 @@
         <div class="fond">
             <div class="pagepanier">
                 <div class="avancee">
-                    <h1>1 ----------------------- 2 ---------------------- 3</h1>
+                    <h1><div style="color: red;">1 Panier</div> ----------------------- 2 Paiement ---------------------- 3 Résumé</h1>
                 </div>
                 <div class="block">
                     <div class="panier">

@@ -14,6 +14,20 @@
     </head>
     <body>
         <style>
+            .profil {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .profil form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .field{
+                display: flex;
+                align-items: center;
+            }
             input[readonly] {
                 color: white;
                 border-color: rgba(118, 118, 118, 0.3);
@@ -24,21 +38,23 @@
                 color: black;
             }
 
-            .profil label{
+            .profil label {
                 color: white;
                 font-size: 30px;
             }
 
-            .profil input{
+            .profil input {
+                width: 370px;
                 font-size: 30px;
                 border-radius: 8px;
             }
-            .profil button{
+
+            .profil button {
                 background-color: transparent;
                 border: none;
             }
 
-            .profil button{
+            .profil button {
                 cursor: pointer;
                 background-color: rgba(0, 0, 0, 0);
                 color: rgb(255, 255, 255);
@@ -51,49 +67,9 @@
                 border: 1px solid #000;
             }
 
+            
         </style>
-        <script>
-            function editField(id) {
-                const input = document.getElementById(id);
-                input.readOnly = false;
-                input.classList.add("editable");
 
-                toggleButtons(id, true);
-            }
-
-            function validateField(id) {
-                const input = document.getElementById(id);
-                input.readOnly = true;
-                input.classList.remove("editable");
-
-                if (input.value !== input.dataset.original) {
-                    input.dataset.modified = "true";
-                }
-
-                checkSubmitVisible();
-                toggleButtons(id, false);
-            }
-
-            function cancelField(id) {
-                const input = document.getElementById(id);
-                input.value = input.dataset.original;
-                input.readOnly = true;
-                input.classList.remove("editable");
-
-                toggleButtons(id, false);
-            }
-
-            function toggleButtons(id, editing) {
-                document.querySelector(`#field-${id} button[onclick^="editField"]`).hidden = editing;
-                document.querySelector(`#field-${id} button[onclick^="validateField"]`).hidden = !editing;
-                document.querySelector(`#field-${id} button[onclick^="cancelField"]`).hidden = !editing;
-            }
-
-            function checkSubmitVisible() {
-                const inputs = document.querySelectorAll('input[data-modified="true"]');
-                document.getElementById('submitBtn').hidden = inputs.length === 0;
-            }
-        </script>
         <div class="navbar">
             <ul>
                 <li><a href="accueil.php"><img src="logo.png" alt="Logo" width="100" height="100"></a></li>
@@ -105,20 +81,22 @@
                     if(isset($_SESSION['user_statut'])){
                         echo '<li><a href="panier.php"><img src="panier.png" alt="Panier" width="30" height="30"></a></li>';
                     }
-                    if(isset($_SESSION['user_statut']) && $_SESSION['user_statut'] == 'admin'){
-                        echo '<li><a href="administrateur.php">Admin</a></li>';
-                    }
                 ?>
                 <li class="inscription"><a href="inscription.php">S'inscrire</a></li>
                 <li><a href="pageprofil.php"><img src="profil.png" alt="Profil" width="80" height="80"></a></li>
             </ul>
         </div>
-
+        
         <div class="fond">
             <div class="contenu">
                 <div class="menu">
                     <h2>BIENVENUE DANS VOTRE ESPACE</h2>
                     <img src="profil.png" class="pfp">
+                    <?php
+                        if(isset($_SESSION['user_statut']) && $_SESSION['user_statut'] == 'admin'){
+                            echo '<button><a href="administrateur.php">Admin</a></button>';
+                        }
+                    ?>
                     <button><a href="pageprofil.php">Mes infos perso</a></button>
                     <button>Mes voyages</button>
                     <button>Messagerie</button>
@@ -172,10 +150,6 @@
                             <button type="button" onclick="validateField('password')" hidden>Valider</button>
                             <button type="button" onclick="cancelField('password')" hidden>Annuler</button>
                         </div>
-                        <div>
-                            <label for="statut">Statut</label>
-                            <input type="text" id="statut" name="statut" value="<?= htmlspecialchars($_SESSION["user_statut"])?>" disabled>
-                        </div>
                         <button id="submitBtn" type="submit" hidden>Soumettre</button>
                     </form>
                 </div>
@@ -187,5 +161,6 @@
             <p>Mail : trek-peaks@gmail.com</p>
             <p>Siège : 1 Pl. Samuel de Champlain, La Défense, 92400 Courbevoie</p>
         </div>
+        <script src="pageprofil.js"></script>
     </body>
 </html>

@@ -1,0 +1,26 @@
+[
+    {
+        "date_depart":"0.00091710758377425",
+        "date_arrivee":"0.0016225749559083",
+        "nbAdultes":1,
+        "nbEnfants":1,
+        "logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],
+        "restaurations":[],
+        "activites":[{"value":"5","nom":"Marché de rue"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],
+        "transports":[],
+        "prix":0
+    },
+
+    {
+        "date_depart":"0.00091710758377425",
+        "date_arrivee":"0.0016225749559083",
+        "nbAdultes":0,
+        "nbEnfants":0,
+        "logements":[],
+        "restaurations":[],
+        "activites":[],
+        "transports":[],
+        "prix":516.8
+    }
+]
+

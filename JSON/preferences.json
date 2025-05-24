@@ -1,26 +1,136 @@
-[
-    {
-        "date_depart":"0.00091710758377425",
-        "date_arrivee":"0.0016225749559083",
-        "nbAdultes":1,
-        "nbEnfants":1,
-        "logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],
-        "restaurations":[],
-        "activites":[{"value":"5","nom":"Marché de rue"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],
-        "transports":[],
-        "prix":0
-    },
+2025-05-14 19:26:21
+{"dateDepart":"2025-05-07","dateRetour":"2025-05-07","nbAdultes":3,"nbEnfants":4,"logements":["1","1","1"],"restaurations":["service","chargeclient","service","chargeclient"],"activites":["Spectacle Broadway","ski","escalade","ski","escalade"],"transports":["bus","bus","bus"],"optionsSupp":["sallesport","sallesport","sallesport"]}
 
-    {
-        "date_depart":"0.00091710758377425",
-        "date_arrivee":"0.0016225749559083",
-        "nbAdultes":0,
-        "nbEnfants":0,
-        "logements":[],
-        "restaurations":[],
-        "activites":[],
-        "transports":[],
-        "prix":516.8
-    }
-]
+2025-05-14 22:16:47
+{"dateDepart":"2025-05-07","dateRetour":"2025-05-07","nbAdultes":3,"nbEnfants":4,"logements":["1","1","1"],"restaurations":["service","chargeclient","service","chargeclient"],"activites":["Spectacle Broadway","ski","escalade","ski","escalade"],"transports":["bus","bus","bus"],"optionsSupp":["sallesport","sallesport","sallesport"]}
+
+2025-05-16 13:34:56
+{"dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"optionsSupp":[]}
+
+2025-05-16 23:55:52
+{"dateDepart":"2025-05-18","dateRetour":"2025-05-25","nbAdultes":2,"nbEnfants":2,"logements":["110","130","100"],"restaurations":["<br />\n<b>Warning</b>:  Undefined variable $prix_restauration1_e1 in <b>C:\\Coding\\tripagenceweb\\voyagetemplate2.php</b> on line <b>74</b><br />\n","<br />\n<b>Warning</b>:  Undefined variable $prix_restauration1_e2 in <b>C:\\Coding\\tripagenceweb\\voyagetemplate2.php</b> on line <b>113</b><br />\n","<br />\n<b>Warning</b>:  Undefined variable $prix_restauration1_e3 in <b>C:\\Coding\\tripagenceweb\\voyagetemplate2.php</b> on line <b>153</b><br />\n"],"activites":["10","30","0","80"],"transports":["20","40","40","40"],"optionsSupp":[]}
+
+2025-05-17 00:38:57
+{"dateDepart":"2025-05-30","dateRetour":"2025-05-24","nbAdultes":2,"nbEnfants":3,"logements":["120","200","220"],"restaurations":["10","40","50"],"activites":["12","17","18"],"transports":["15","12","12"],"optionsSupp":[]}
+
+2025-05-17 01:03:58
+{"dateDepart":"2025-05-02","dateRetour":"2025-05-15","nbAdultes":3,"nbEnfants":3,"logements":["110","130","100"],"restaurations":["0","0","0","0","0","0"],"activites":["10","0","80"],"transports":["20","40","40"],"optionsSupp":[]}
+
+2025-05-17 01:04:00
+{"dateDepart":"2025-05-02","dateRetour":"2025-05-15","nbAdultes":3,"nbEnfants":3,"logements":["110","130","100"],"restaurations":["0","0","0","0","0","0"],"activites":["10","0","80"],"transports":["20","40","40"],"optionsSupp":[]}
+
+2025-05-17 01:05:58
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-21","nbAdultes":3,"nbEnfants":3,"logements":[{"value":"110","nom":"Logement"},{"value":"130","nom":"Logement"},{"value":"100","nom":"Logement"}],"restaurations":[{"value":"0","nom":"Resto"},{"value":"0","nom":"Resto"}],"activites":[{"value":"10","nom":"Activité"},{"value":"0","nom":"Activité"},{"value":"80","nom":"Activité"}],"transports":[{"value":"20","nom":"Transport"},{"value":"40","nom":"Transport"},{"value":"40","nom":"Transport"}],"optionsSupp":[]}
+
+2025-05-17 01:07:56
+{"dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[{"value":"110","nom":"Logement"},{"value":"130","nom":"Logement"},{"value":"100","nom":"Logement"}],"restaurations":[{"value":"0","nom":"Resto"},{"value":"0","nom":"Resto"},{"value":"0","nom":"Resto"}],"activites":[{"value":"10","nom":"Activité"},{"value":"0","nom":"Activité"},{"value":"80","nom":"Activité"}],"transports":[{"value":"20","nom":"Transport"},{"value":"25","nom":"Transport"},{"value":"40","nom":"Transport"},{"value":"40","nom":"Transport"}],"optionsSupp":[]}
+
+2025-05-17 01:10:52
+{"dateDepart":"2025-04-30","dateRetour":"2025-05-07","nbAdultes":2,"nbEnfants":3,"logements":[{"value":"110","nom":""},{"value":"130","nom":""},{"value":"100","nom":""}],"restaurations":[{"value":"0","nom":""},{"value":"0","nom":""},{"value":"0","nom":""}],"activites":[{"value":"10","nom":""},{"value":"30","nom":""},{"value":"0","nom":""},{"value":"80","nom":""}],"transports":[{"value":"20","nom":""},{"value":"40","nom":""},{"value":"40","nom":""}],"optionsSupp":[]}
+
+2025-05-17 01:13:16
+{"dateDepart":"2025-05-08","dateRetour":"2025-05-14","nbAdultes":3,"nbEnfants":4,"logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],"restaurations":[{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"}],"activites":[{"value":"10","nom":"Temple Senso-ji"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],"transports":[{"value":"20","nom":"Métro"},{"value":"40","nom":"Train"},{"value":"40","nom":"Train"}],"optionsSupp":[]}
+
+   
+2025-05-17 13:52:39
+{"dateDepart":"2025-05-09","dateRetour":"2025-05-15","nbAdultes":3,"nbEnfants":3,"logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],"restaurations":[{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"}],"activites":[{"value":"10","nom":"Temple Senso-ji"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],"transports":[{"value":"20","nom":"Métro"},{"value":"40","nom":"Train"},{"value":"40","nom":"Train"}],"prix":2482.4}
+
+2025-05-17 13:53:24
+{"dateDepart":"2025-05-09","dateRetour":"2025-05-15","nbAdultes":3,"nbEnfants":3,"logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],"restaurations":[{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"}],"activites":[{"value":"10","nom":"Temple Senso-ji"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],"transports":[{"value":"20","nom":"Métro"},{"value":"40","nom":"Train"},{"value":"40","nom":"Train"}],"prix":2482.4}
+
+2025-05-17 13:53:33
+{"dateDepart":"2025-05-09","dateRetour":"2025-05-15","nbAdultes":10,"nbEnfants":3,"logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],"restaurations":[{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"}],"activites":[{"value":"10","nom":"Temple Senso-ji"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],"transports":[{"value":"20","nom":"Métro"},{"value":"40","nom":"Train"},{"value":"40","nom":"Train"}],"prix":2482.4}
+
+2025-05-17 13:54:02
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-30","nbAdultes":12,"nbEnfants":2,"logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],"restaurations":[{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"}],"activites":[{"value":"10","nom":"Temple Senso-ji"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],"transports":[{"value":"20","nom":"Métro"},{"value":"40","nom":"Train"},{"value":"40","nom":"Train"}],"prix":5050.4}
+
+2025-05-17 14:03:04
+{"dateDepart":"2025-05-14","dateRetour":"2025-05-23","nbAdultes":3,"nbEnfants":3,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":5050.4}
+
+2025-05-17 14:03:33
+{"dateDepart":"2025-05-08","dateRetour":"","nbAdultes":4,"nbEnfants":0,"logements":[{"value":"110","nom":"Hôtel Copacabana"},{"value":"90","nom":"Appartement bord de mer"},{"value":"130","nom":"Hôtel Vista Cristo"},{"value":"100","nom":"Eco-lodge"}],"restaurations":[{"value":"30","nom":"Churrascaria"},{"value":"35","nom":"Restaurant panoramique"},{"value":"20","nom":"Cantine nature"}],"activites":[{"value":"0","nom":"Plage & baignade"},{"value":"0","nom":"Beach-volley"},{"value":"20","nom":"Montée au Christ"},{"value":"10","nom":"Randonnée forêt"},{"value":"12","nom":"Observation animaux"}],"transports":[{"value":"10","nom":"Bus"},{"value":"15","nom":"Uber"},{"value":"20","nom":"Train touristique"},{"value":"20","nom":"Train touristique"}],"prix":5050.4}
+
+2025-05-17 14:04:25
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-30","nbAdultes":12,"nbEnfants":2,"logements":[{"value":"110","nom":"Ryokan Asakusa"},{"value":"130","nom":"Hôtel Shibuya"},{"value":"100","nom":"Refuge Fuji"}],"restaurations":[{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"},{"value":"0","nom":"Valeur ici"}],"activites":[{"value":"10","nom":"Temple Senso-ji"},{"value":"0","nom":"Shopping"},{"value":"80","nom":"Randonnée Fuji"}],"transports":[{"value":"20","nom":"Métro"},{"value":"40","nom":"Train"},{"value":"40","nom":"Train"}],"prix":5050.4}
+
+2025-05-17 14:04:57
+{"dateDepart":"2025-05-14","dateRetour":"2025-05-29","nbAdultes":4,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":5649.6}
+
+2025-05-17 14:08:22
+{"dateDepart":"","dateRetour":"","nbAdultes":6,"nbEnfants":3,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":2594.4}
+
+2025-05-17 16:10:37
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-21","nbAdultes":2,"nbEnfants":5,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"20","nom":"Tour guidée"},{"value":"30","nom":"Atelier peinture"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"},{"value":"0","nom":"Marché local"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":4399.2}
+
+2025-05-17 16:11:36
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-21","nbAdultes":7,"nbEnfants":5,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"20","nom":"Tour guidée"},{"value":"30","nom":"Atelier peinture"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"},{"value":"0","nom":"Marché local"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":4399.2}
+
+2025-05-17 16:12:06
+{"dateDepart":"2025-05-24","dateRetour":"2025-06-01","nbAdultes":13,"nbEnfants":2,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"17","nom":"Musée du Louvre"},{"value":"40","nom":"Atelier parfum"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":6140}
+
+2025-05-17 17:04:14
+{"dateDepart":"2025-05-14","dateRetour":"2025-05-29","nbAdultes":4,"nbEnfants":3,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"30","nom":"Atelier peinture"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":8576.8}
+
+2025-05-17 17:04:49
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-21","nbAdultes":1,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":3445.2}
+
+2025-05-23 17:44:12
+{"dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":902.4}
+
+2025-05-23 17:55:07
+{"dateDepart":"","dateRetour":"","nbAdultes":1,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":0}
+
+2025-05-23 17:55:35
+{"dateDepart":"2025-05-22","dateRetour":"2025-05-15","nbAdultes":4,"nbEnfants":3,"logements":[{"value":"40","nom":"Auberge charme centre"},{"value":"60","nom":"Guesthouse vue colline"},{"value":"90","nom":"Hammam hôtel"}],"restaurations":[{"value":"12","nom":"Khinkali house"},{"value":"18","nom":"Rooftop restaurant"},{"value":"10","nom":"Tchaïkhana traditionnelle"}],"activites":[{"value":"10","nom":"Visite guidée street art"},{"value":"0","nom":"Montée forteresse"},{"value":"15","nom":"Bain thermal sulfuré"}],"transports":[{"value":"3","nom":"Bus"},{"value":"5","nom":"Téléphérique"},{"value":"5","nom":"Téléphérique"}],"prix":0}
+
+2025-05-23 21:23:50
+{"dateDepart":"2025-05-15","dateRetour":"2025-05-14","nbAdultes":3,"nbEnfants":3,"logements":[{"value":"100","nom":"Hôtel Eixample"},{"value":"120","nom":"Maison d'artiste"},{"value":"130","nom":"Appart bord de mer"}],"restaurations":[{"value":"20","nom":"Tapas local"},{"value":"15","nom":"Snack Güell"},{"value":"18","nom":"Bar plage"}],"activites":[{"value":"15","nom":"Visite basilique"},{"value":"0","nom":"Balade parc"},{"value":"0","nom":"Baignade"}],"transports":[{"value":"12","nom":"Métro"},{"value":"10","nom":"Bus"},{"value":"20","nom":"Taxi"},{"value":"10","nom":"Bus"}],"prix":1223.8}
+
+2025-05-23 23:40:26
+{"dateDepart":"2025-05-22","dateRetour":"2025-05-22","nbAdultes":4,"nbEnfants":3,"logements":[{"value":"100","nom":"Hôtel Eixample"},{"value":"120","nom":"Maison d'artiste"},{"value":"130","nom":"Appart bord de mer"}],"restaurations":[{"value":"20","nom":"Tapas local"},{"value":"15","nom":"Snack Güell"},{"value":"18","nom":"Bar plage"}],"activites":[{"value":"15","nom":"Visite basilique"},{"value":"0","nom":"Balade parc"},{"value":"0","nom":"Baignade"}],"transports":[{"value":"12","nom":"Métro"},{"value":"10","nom":"Bus"},{"value":"10","nom":"Bus"}],"prix":1752}
+
+2025-05-23 23:41:00
+{"dateDepart":"2025-05-24","dateRetour":"2025-05-24","nbAdultes":4,"nbEnfants":2,"logements":[{"value":"110","nom":"Hôtel Forum"},{"value":"130","nom":"Maison papale"},{"value":"120","nom":"Appart central"}],"restaurations":[{"value":"18","nom":"Pizza Roma"},{"value":"20","nom":"Trattoria Vaticana"},{"value":"12","nom":"Snack Fontaine"}],"activites":[{"value":"16","nom":"Visite Colisée"},{"value":"0","nom":"Visite Basilique"},{"value":"1","nom":"Lancer pièce Trevi"}],"transports":[{"value":"10","nom":"Métro"},{"value":"8","nom":"Bus"},{"value":"8","nom":"Bus"}],"prix":2001}
+
+2025-05-23 23:43:06
+{"dateDepart":"","dateRetour":"","nbAdultes":4,"nbEnfants":4,"logements":[{"value":"130","nom":"Appart bord de mer"}],"restaurations":[],"activites":[],"transports":[],"prix":1794}
+
+2025-05-24 00:40:56
+{"dateDepart":"","dateRetour":"","nbAdultes":2,"nbEnfants":5,"logements":[{"value":"120","nom":"Hôtel Waterfront"},{"value":"130","nom":"Lodge Nature"},{"value":"150","nom":"Appart luxe"}],"restaurations":[{"value":"25","nom":"Cuisine locale"},{"value":"10","nom":"Snack rapide"},{"value":"15","nom":"Bar lounge"}],"activites":[{"value":"0","nom":"Randonnée montagne"},{"value":"12","nom":"Visite musée historique"},{"value":"0","nom":"Shopping artisanal"}],"transports":[{"value":"20","nom":"Téléphérique"},{"value":"15","nom":"Ferry"},{"value":"15","nom":"Ferry"}],"prix":582.4}
+
+2025-05-24 00:51:09
+{"dateDepart":"","dateRetour":"","nbAdultes":2,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":582.4}
+
+2025-05-24 00:54:37
+{"dateDepart":"2025-04-30","dateRetour":"2025-05-07","nbAdultes":1,"nbEnfants":5,"logements":[{"value":"110","nom":"Hôtel Forum"},{"value":"130","nom":"Maison papale"},{"value":"120","nom":"Appart central"}],"restaurations":[{"value":"18","nom":"Pizza Roma"},{"value":"20","nom":"Trattoria Vaticana"},{"value":"12","nom":"Snack Fontaine"}],"activites":[{"value":"16","nom":"Visite Colisée"},{"value":"0","nom":"Visite Basilique"},{"value":"1","nom":"Lancer pièce Trevi"},{"value":"20","nom":"Shopping souvenir"}],"transports":[{"value":"10","nom":"Métro"},{"value":"8","nom":"Bus"},{"value":"8","nom":"Bus"}],"prix":0}
+
+2025-05-24 01:00:07
+{"dateDepart":"2025-05-14","dateRetour":"2025-05-30","nbAdultes":2,"nbEnfants":1,"logements":[{"value":"100","nom":"Hôtel Naoussa"},{"value":"95","nom":"Hôtel Parikia"},{"value":"85","nom":"Maison traditionnelle"}],"restaurations":[{"value":"20","nom":"Taverne locale"},{"value":"10","nom":"Gyros rapide"},{"value":"15","nom":"Café village"}],"activites":[{"value":"0","nom":"Plage Kolymbithres"},{"value":"5","nom":"Visite musée"},{"value":"0","nom":"Randonnée colline"}],"transports":[{"value":"3","nom":"Bus local"},{"value":"15","nom":"Scooter"},{"value":"15","nom":"Scooter"}],"prix":1460}
+
+2025-05-24 01:01:40
+{"dateDepart":"2025-05-07","dateRetour":"2025-05-30","nbAdultes":2,"nbEnfants":1,"logements":[{"value":"100","nom":"Hôtel Naoussa"},{"value":"95","nom":"Hôtel Parikia"},{"value":"85","nom":"Maison traditionnelle"}],"restaurations":[{"value":"20","nom":"Taverne locale"},{"value":"10","nom":"Gyros rapide"},{"value":"15","nom":"Café village"}],"activites":[{"value":"0","nom":"Plage Kolymbithres"},{"value":"5","nom":"Visite musée"},{"value":"0","nom":"Randonnée colline"},{"value":"10","nom":"Festival local"}],"transports":[{"value":"3","nom":"Bus local"},{"value":"15","nom":"Scooter"},{"value":"15","nom":"Scooter"}],"prix":725.4}
+
+2025-05-24 01:04:04
+{"destination":"Amsterdam","dateDepart":"2025-05-01","dateRetour":"2025-05-08","nbAdultes":2,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel centre-ville"},{"value":"110","nom":"Hôtel Jordaan"},{"value":"130","nom":"Appart avec vue canal"}],"restaurations":[{"value":"15","nom":"Café local"},{"value":"25","nom":"Restaurant Jordaan"},{"value":"20","nom":"Bar à bières"}],"activites":[{"value":"18","nom":"Visite musée"},{"value":"0","nom":"Balade quartier"},{"value":"20","nom":"Croisière"}],"transports":[{"value":"8","nom":"Tram"},{"value":"10","nom":"Vélo"},{"value":"10","nom":"Vélo"}],"prix":751.4}
+
+2025-05-24 02:38:37
+{"destination":"Luang Prabang","dateDepart":"2025-05-08","dateRetour":"2025-05-21","nbAdultes":4,"nbEnfants":1,"logements":[{"value":"35","nom":"Maison d'hôtes coloniale"},{"value":"60","nom":"Eco-lodge forêt"},{"value":"20","nom":"Hostel marché"}],"restaurations":[{"value":"6","nom":"Buffet végétarien local"},{"value":"7","nom":"Resto laotien nature"},{"value":"10","nom":"Bar rooftop"}],"activites":[{"value":"2","nom":"Visite temple"},{"value":"0","nom":"Baignade cascades"},{"value":"0","nom":"Shopping artisanat"}],"transports":[{"value":"3","nom":"Tuk-tuk"},{"value":"6","nom":"Minivan partagé"},{"value":"6","nom":"Minivan partagé"}],"prix":982.8}
+
+2025-05-24 02:42:57
+{"destination":"Paris","dateDepart":"","dateRetour":"","nbAdultes":3,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel Montmartre"},{"value":"200","nom":"Hôtel du Louvre"},{"value":"220","nom":"Château Hôtel"}],"restaurations":[{"value":"10","nom":"Boulangerie locale"},{"value":"40","nom":"Restaurant Louvre"},{"value":"50","nom":"Brasserie Royale"}],"activites":[{"value":"12","nom":"Visite Basilique"},{"value":"17","nom":"Musée du Louvre"},{"value":"18","nom":"Visite château"}],"transports":[{"value":"15","nom":"Métro"},{"value":"12","nom":"RER"},{"value":"12","nom":"RER"}],"prix":554.3}
+
+2025-05-24 10:12:39
+{"destination":"Luang Prabang","dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":2030.4}
+
+2025-05-24 10:13:23
+{"destination":"Luang Prabang","dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":0}
+
+2025-05-24 10:14:31
+{"destination":"Luang Prabang","dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":0}
+
+2025-05-24 10:14:50
+{"destination":"Luang Prabang","dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":0}
+
+2025-05-24 10:29:52
+{"destination":"Barcelone","dateDepart":"","dateRetour":"","nbAdultes":0,"nbEnfants":0,"logements":[],"restaurations":[],"activites":[],"transports":[],"prix":0}
 

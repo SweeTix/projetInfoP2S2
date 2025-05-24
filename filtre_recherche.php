@@ -29,7 +29,7 @@
                     <li><a href="pageprofil.php"><img src="profil.png" alt="Profil" width="80" height="80"></a></li>
                 </ul>
             </div>
-
+            
             <div class="recherche">
                 <form action="filtre_recherche.php" method="GET">
                     <input type="search" name="q" placeholder="Rechercher..." required>
@@ -37,58 +37,66 @@
                 </form>
             </div>
             
-
+            
             <div class="filtre">
-                <ul>
-                    <li>
-                        <label for="region">Région :</label>
-                        <select id="region" name="region">
-                            <option value="region">-------Région-------</option>
-                            <option value="alpes">Alpes</option>
-                            <option value="pyrenees">Pyrénées</option>
-                            <option value="himalaya">Himalaya</option>
-                            <option value="oural">Oural</option>
-                            <option value="caucase">Caucase</option>
-                            <option value="rocheuses">Rocheuses</option>
-                            <option value="andes">Andes</option>
-                            <option value="appalaches">Appalaches</option>
-                            <option value="carpates">Carpates</option>
-                            <option value="atlas">Atlas</option>
-                            <option value="alpes-japonaises">Alpes Japonaises</option>
-                            <option value="alpes-sud">Alpes du Sud</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="formule">Formule :</label>
-                        <select id="formule" name="formule">
-                            <option value="formule">---Formule---</option>
-                            <option value="logement">Logement</option>
-                            <option value="activites">Activités</option>
-                            <option value="voyage">Voyage</option>
-                            <option value="all">All Inclusive</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="depart">Départ :</label>
-                        <input type="date" name="depart">
-                    </li>
-                    <li>
-                        <label for="retour">Retour :</label>
-                        <input type="date" name="retour">
-                    </li>
-                    <li>
-                        <label for="prix">Prix :</label>
-                        <input type="range" name="prix" min="0" max="10000" step="100" value="5000">
-                        <span id="valeurPrix">500</span> €
-                    </li>
-                </ul>
+                <form action="filtre_recherche.php" method="GET">
+                    <ul>
+                        <li>
+                            <label for="region">Région :</label>
+                            <select id="region" name="region">
+                                <option value="region">-------Région-------</option>
+                                <option value="alpes">Alpes</option>
+                                <option value="pyrenees">Pyrénées</option>
+                                <option value="himalaya">Himalaya</option>
+                                <option value="oural">Oural</option>
+                                <option value="caucase">Caucase</option>
+                                <option value="rocheuses">Rocheuses</option>
+                                <option value="andes">Andes</option>
+                                <option value="appalaches">Appalaches</option>
+                                <option value="carpates">Carpates</option>
+                                <option value="atlas">Atlas</option>
+                                <option value="alpes-japonaises">Alpes Japonaises</option>
+                                <option value="alpes-sud">Alpes du Sud</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="type">type :</label>
+                            <select id="type" name="type">
+                                <option value="famille">---Famille---</option>
+                                <option value="extrême">extrême</option>
+                                <option value="sportif">sportif</option>
+                                <option value="detente">detente</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="depart">Départ :</label>
+                            <input type="date" name="depart">
+                        </li>
+                        <li>
+                            <label for="retour">Retour :</label>
+                            <input type="date" name="retour">
+                        </li>
+                        <li>
+                            <label for="prix">Prix :</label>
+                            <select id="prix" name="prix">
+                                <option value=" moins de 5000">--- moins 5000 euros---</option>
+                                <option value="moins de 2700"> moins 2700 euros</option>
+                                <option value="moins"> moins 1800 euros</option>
+                            </select> €
+                        </li>
+
+                        <li><button type="submit">filtrer</button></li>
+                    </ul>
+                </form>
             </div>
+            
 
 
 
             <div class="annonces-container">
             <?php
 
+$motrecherche= 'ZZ';
 
 
 if (isset($_GET['q'])) {
@@ -124,6 +132,8 @@ if (isset($_GET['q'])) {
             foreach ($data as $voyage) {
                 // --- Infos générales ---
             $destination     = $voyage["lieu"] ?? "";
+            $description     = $voyage["description"];
+
             $etape1          = $voyage["etape1"] ?? "";
             $etape2          = $voyage["etape2"] ?? "";
             $etape3          = $voyage["etape3"] ?? "";
@@ -165,12 +175,6 @@ if (isset($_GET['q'])) {
           
             ?>
                 </div>
-
-                <div class="swpage">
-                    <button><img src="p2.png"></button>
-                    <p>Page 1/4</p>
-                    <button><img src="p1.png"></button>
-            </div>
 
         </div>
 

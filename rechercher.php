@@ -91,6 +91,8 @@
 
             .annonces-container {
                 gap: 10px;
+                margin-top: 0px;
+                padding-top: 10px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;

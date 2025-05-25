@@ -1,0 +1,47 @@
+[
+    {
+        "nom": "Monteiro Alves",
+        "prenom": "Tom",
+        "naissance": "2025-05-13",
+        "adresse": "Pontoise",
+        "email": "tom@gmail.com",
+        "mdp": "0000",
+        "statut": "admin"
+    },
+    {
+        "nom": "Wallot",
+        "prenom": "Manfred",
+        "naissance": "2025-05-13",
+        "adresse": "pontoise",
+        "email": "manfred@gmail.com",
+        "mdp": "1111",
+        "statut": "utilisateur"
+    },
+    {
+        "nom": "Renaud",
+        "prenom": "Antoine",
+        "naissance": "2025-04-28",
+        "adresse": "jufnbeziuyfbziue",
+        "email": "antoine@gmail.com",
+        "mdp": "02141",
+        "statut": "admin"
+    },
+    {
+        "nom": "Monteiro",
+        "prenom": "Paul",
+        "naissance": "2025-05-13",
+        "adresse": "Pontoise",
+        "email": "Paul@gmail.com",
+        "mdp": "3205",
+        "statut": "utilisateur"
+    },
+    {
+        "nom": "Monteiro",
+        "prenom": "Michel",
+        "naissance": "2025-05-03",
+        "adresse": "jufnbeziuyfbziue",
+        "email": "michel@gmail.com",
+        "mdp": "2365895",
+        "statut": "utilisateur"
+    }
+]

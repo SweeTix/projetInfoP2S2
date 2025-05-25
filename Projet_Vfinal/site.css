@@ -1,0 +1,969 @@
+/* Réglages de base */
+body {
+    margin: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: white;
+}
+
+/* navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(9, 52, 28, 1);
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    list-style-type: none;
+}
+
+.navbar li {
+	height: 40px;
+	margin: 20px 15px 20px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex; 
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a:hover {
+    color: rgb(255, 205, 96);
+}
+
+.connexion {
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.connexion:hover {
+    border: 2px solid rgb(255, 205, 96);
+}
+
+/* Image de fond */
+
+.fond {
+    padding-top: 20px;
+    background-image: url('montagne2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 120vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.fond h1{
+    color: white;
+}
+
+/* Barre d'information */
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(9, 52, 28, 1);
+    color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.info p {
+    margin : 0px 25px;
+}
+
+/* accueil */
+
+.titre {
+    justify-content: center;
+    align-items: center;
+    margin: 250px auto;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.titre h1 {
+    margin:0px; 
+    color: rgb(255, 205, 96);
+    font-size: 90px; 
+}
+
+.titre p {
+    margin: 0px; 
+    color: white;
+    font-size: 36px;
+}
+
+.bouton-recherche-accueil {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(255,205,96);
+    color: rgb(255,255,255);
+    border-radius: 45px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    margin-bottom: 200px;
+    cursor: pointer;
+}
+
+
+/* Explication du site */
+
+.content {
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.separateur {
+    height: auto;
+    font-size: 50px;
+    color: rgba(9, 52, 28, 1);
+}
+
+.case {
+    display: flex;
+    margin: 25px auto;
+    background-color: white;
+    width: 70%;
+    height: 150px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.case img {
+    margin: 5px;
+    width: 20%;
+}
+
+.case p {
+    text-align: justify;
+    margin: auto 10px;
+    width: 80%;
+}
+
+.content h1 {
+    color: rgba(9, 52, 28, 1);
+}
+
+/* Carte */
+
+.destinations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carte {
+    position: relative;
+    width: 1025px;
+    height: 845px;
+    background-image: url('carte.png');
+    border: 2px solid #000;
+}
+
+.point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 205, 96);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.point::after {
+    content: attr(data-name);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.point:hover::after {
+    opacity: 1;
+}
+
+.point.alpes {top: 41%; left: 48.5%;}
+.point.pyrenees {top: 42.5%; left: 46.5%;}
+.point.himalaya {top: 48.5%; left: 70%;}
+.point.oural {top: 33%; left: 63%;}
+.point.caucase {top: 41.5%; left: 58.5%;}
+.point.rocheuses {top: 42%; left: 14%;}
+.point.andes {top: 64%; left: 27%;}
+.point.appalaches {top: 43%; left: 25%;}
+.point.carpates {top: 41%; left: 53.5%;}
+.point.atlas {top: 47%; left: 46%;}
+.point.alpes-japonaises {top: 45%; left: 85%;}
+.point.alpes-sud {top: 75%; left: 93.5%;}
+.point.cordillere-australienne {top: 69%; left: 88%;}
+.point.tian-shan {top: 43%; left: 68%;}
+.point.altai {top: 38%; left: 71%;}
+
+.annonce {
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.annonce img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.annonce p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000;
+}
+
+.annonce button{
+    cursor: pointer;
+    border: none;
+    background-color: #0000;
+}
+
+.annonce button:hover{
+    transform: scale(1.1);
+}
+
+.annonce ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.annonce ul li {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.annonces-container {
+    gap: 10px;
+    margin-top: 0px;
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Page Voyage Détaillé */
+
+.voyagedet {
+    color: white;
+    font-size: 30px;
+    display: flex;
+
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.bloc_description_voyage {
+    background-color: rgba(9, 52, 28,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    width: 30%;
+    height: 600px;
+}
+
+.bloc_p_voyage{
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 8px;
+    width: 60%;
+}
+
+.ligne {
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    padding-left: 30px;
+}
+
+.container h1 {
+    font-size: 60px;
+    color: rgb(255, 205, 96);
+}
+
+.container p{
+    font-size: 22px;
+    color: white;
+}
+
+.bloc_description_voyage {
+    background-color: rgba(9, 52, 28,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    width: 30%;
+    padding: 10px;
+}
+
+.bloc_description_voyage li{
+    list-style-type: none;
+    color: white;
+}
+
+.bloc_p_voyage{
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+}
+
+.info_voy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc_p_voyage form {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.next {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    padding: 15px;
+    border: 1px solid #000;
+}
+
+.next:hover{
+    background-color: rgb(255, 205, 96);
+}
+
+.ligne {
+    gap: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.etape{
+    display: none;
+}
+
+.etape.active{
+    display: block;
+}
+
+/* inscription et connexion */
+
+.formulaire{
+    text-align: center;
+    font-family: arial;
+    margin: auto;
+    margin-top: 10%;
+    width: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(9, 52, 28,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+.formulaire h1{
+    color: rgb(255, 205, 96);
+    padding-top: 20px;
+    font-size:90px;
+}
+
+.formulaire input,.formulaire button{
+    width: 80%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.formulaire button{
+    margin: 10px 20px 30px 20px;
+    font-size: 25px;
+    background-color: rgb(255, 205, 96);
+    color:white;
+}
+
+.formulaire input{
+    margin: 20px 20px 10px 20px;
+    font-size: 20px;
+}
+
+/* inscription reussie */
+
+.titre {
+    justify-content: center;
+    align-items: center;
+    margin: 250px auto;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.titre h1 {
+    margin:0px; 
+    color: rgb(255, 205, 96);
+    font-size: 90px; 
+}
+
+.titre p {
+    margin: 0px; 
+    color: white;
+    font-size: 36px;
+}
+
+.titre button {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    margin: 10px 20px 30px 20px;
+    font-size: 36px;
+    background-color: rgb(255, 205, 96);
+}
+
+/* page profil */
+
+.text{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 205, 96);
+}
+
+.contenu{
+    display: flex;
+    margin-top: 5%;
+}
+
+.profil{
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0px 10px;
+    width: 80%;
+}
+
+.profil h1{
+    font-size: 90px;
+    color: #ffcd60;
+}
+
+.profil label{
+    color: white;
+    font-size: 30px;
+}
+
+.profil input{
+    color: white;
+    font-size: 30px;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profil form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.field{
+    display: flex;
+    align-items: center;
+}
+input[readonly] {
+    color: white;
+    border-color: rgba(118, 118, 118, 0.3);
+    background-color: rgba(239, 239, 239, 0.3);
+}
+
+input.editable {
+    color: black;
+}
+
+.profil label {
+    color: white;
+    font-size: 30px;
+}
+
+.profil input {
+    width: 370px;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+.profil button {
+    background-color: transparent;
+    border: none;
+}
+
+.profil button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+    padding: 15px;
+    border: 2px solid white;
+}
+
+.profil button:hover{
+    border: 2px solid rgb(255, 205, 96);
+}
+
+.profil form button#submiBtn{
+    align-items: flex-start;
+}
+
+.menu h2 {
+    color: #ffcd60;
+    font-size: 36px;
+    margin: 0px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(9, 52, 28,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 20px;
+    width: 15%;
+    height: 750px;
+    margin: 0px 10px;
+    border-radius: 8px;
+
+}
+
+.menu .pfp {
+    width: 200px;
+    height: 200px;
+}
+
+.menu button {   
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+    padding: 15px;
+    border: 1px solid #000;
+}
+
+.menu button:hover {
+    background-color: rgb(255, 205, 96);
+}
+
+/* Page derniervoy */
+
+.bloc_p_voyage{
+    background-color: rgba(9, 52, 28, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 20px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 8px;
+    width: 60%;
+}
+
+.bloc_p_voyage h1{
+    font-size: 30px;
+    color: rgb(255, 205, 96);
+}
+
+.bloc_p_voyage p{
+    font-size: 22px;
+    color: white;
+}
+
+.btn1 {
+    font-size: 25px;
+    background-color: rgb(255, 205, 96);
+    color: white;
+}
+
+/* Page panier */
+
+.pagepanier{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.pagepanier h1{
+    font-size: 36px;
+    color: #ffcd60;
+}
+
+.pagepanier p{
+    font-size: 22px;
+    color: white;
+}
+.pagepanier button{
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 8px; 
+    border: 1px solid #000;
+    background-color: rgb(255, 205, 96);
+    color: white;
+}
+
+.avancee{
+    margin: auto;
+    background-color: rgba(9, 52, 28,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    width: 80%;
+    font-size: 20px;
+    color: #ffcd60;
+}
+
+.block{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.panier{
+    background-color: rgba(9, 52, 28,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    width: 1000px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: fit-content;
+}
+
+.panier_liste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aligne{
+    width: 700px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.5);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.aligne button{
+    border: none;
+    background-color: transparent;
+}
+
+.colonne{
+    display: flex;
+    flex-direction: column;
+}
+
+.paiement {
+    background-color: rgba(9, 52, 28,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.simple_btn{
+    height: 30px; 
+    width: 50px;
+    color: black;
+}
+
+/* Page recherche et annonce */
+
+.recherche {
+    display: flex;
+    flex-direction: column;
+}
+
+.recherche-haut {
+    width: fit-content;
+    margin: 10px auto;
+    margin-top: 100px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.recherche-haut form {
+    margin: 70px auto;
+}
+
+.recherche-haut input[type="search"] {
+    flex: 1;
+    width: 600px;
+    height: 60px;
+    padding: 8px;
+    border: 1px solid rgba(9, 52, 28, 1);
+    border-radius: 5px 0 0 5px;
+}
+
+.recherche-haut button {
+    padding: 8px;
+    height: 60px;
+    background-color: rgb(255, 205, 96, 1);
+    color: white;
+    border: 1px solid rgba(255, 205, 96, 1);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.recherche-haut button:hover {
+    background-color: rgba(9, 52, 28, 1);
+    border: 1px solid rgba(9, 52, 28, 1);
+}
+
+.filtre {
+    width: fit-content;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.filtre ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+.filtre ul li {
+    padding: 0px 25px;
+    display: flex;
+}
+
+.filtre select {
+    margin: 0px 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.filtre input[type="date"] {
+    padding: 5px;
+    margin: 0px 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.annonces-container {
+    gap: 10px;
+    margin-top: 0px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.annonce {
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.annonce img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.annonce p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000;
+}
+
+.annonce button{
+    cursor: pointer;
+    border: none;
+    background-color: #0000;
+}
+
+.annonce button:hover{
+    transform: scale(1.1);
+}
+
+.annonce ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.annonce ul li {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+/* page voyage util */
+
+.contenu h1 {
+    color: #ffcd60;
+    font-size: 36px;
+    margin: 0px;
+}
+
+.voyages_profil{
+    width: 80%;
+    font-size: 22px;
+    color: white;
+    display:flex;
+    flex-direction: column;
+}
+
+.recommandations {
+    background-color: rgba(9, 52, 28,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+.voyages_payer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top:20px;
+    background-color: rgba(9, 52, 28,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.liste_voy{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.voy{
+    background-color: rgba(255, 255, 255,0.5);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding: 20px 20px 5px 20px;
+}
+
+
+/* page administration */
+
+.liste_util{
+    text-align: center;
+    font-family: Arial;
+    padding: 25px;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgba(9, 52, 28,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+.liste_util h1{
+    color:rgb(255, 205, 96);
+    font-size: 90px;
+}
+
+.liste_util table{
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-color: #000;
+    border-radius: 8px;
+}
+.liste_util th, .liste_util td{
+    font-size:18px;
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.liste_util th{
+    background-color: rgb(255, 205, 96);
+    color: white;
+    text-align: center;
+}
+
+.vip, .ban{
+    font-size: 25px;
+    border-radius: 8px;
+    border-color: rgb(255, 205, 96);
+    background-color: white;
+    color:rgb(255, 205, 96);
+}
+
+.vip:hover{
+    color:white;
+    background-color: rgb(255, 205, 96);
+}
+
+.ban:hover{
+    color:white;
+    background-color: rgb(255, 205, 96);
+}

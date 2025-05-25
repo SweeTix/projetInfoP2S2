@@ -1,0 +1,64 @@
+{
+    "destination": "Atlas",
+    "dateDepart": "",
+    "dateRetour": "",
+    "nbAdultes": 2,
+    "nbEnfants": 3,
+    "logements": [
+        {
+            "value": "80",
+            "nom": "Cabane familial"
+        },
+        {
+            "value": "90",
+            "nom": "Appartement résidence"
+        },
+        {
+            "value": "70",
+            "nom": "Cabane en bois"
+        }
+    ],
+    "restaurations": [
+        {
+            "value": "25",
+            "nom": "Restaurant régional"
+        },
+        {
+            "value": "12",
+            "nom": "Pique-nique montagnard"
+        },
+        {
+            "value": "30",
+            "nom": "Fondue restaurant"
+        }
+    ],
+    "activites": [
+        {
+            "value": "10",
+            "nom": "Snowkite"
+        },
+        {
+            "value": "0",
+            "nom": "Pêche en lac de montagne"
+        },
+        {
+            "value": "15",
+            "nom": "Trail blanc"
+        }
+    ],
+    "transports": [
+        {
+            "value": "15",
+            "nom": "Télécabine"
+        },
+        {
+            "value": "25",
+            "nom": "Bus"
+        },
+        {
+            "value": "25",
+            "nom": "Bus"
+        }
+    ],
+    "prix": 1235
+}

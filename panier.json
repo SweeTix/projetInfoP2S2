@@ -1,7 +1,88 @@
-
-{"destination":"Amsterdam","dateDepart":"2025-05-01","dateRetour":"2025-05-08","nbAdultes":2,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel centre-ville"},{"value":"110","nom":"Hôtel Jordaan"},{"value":"130","nom":"Appart avec vue canal"}],"restaurations":[{"value":"15","nom":"Café local"},{"value":"25","nom":"Restaurant Jordaan"},{"value":"20","nom":"Bar à bières"}],"activites":[{"value":"18","nom":"Visite musée"},{"value":"0","nom":"Balade quartier"},{"value":"20","nom":"Croisière"}],"transports":[{"value":"8","nom":"Tram"},{"value":"10","nom":"Vélo"},{"value":"10","nom":"Vélo"}],"prix":751.4}
-{"destination":"Amsterdam","dateDepart":"2025-05-01","dateRetour":"2025-05-08","nbAdultes":2,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel centre-ville"},{"value":"110","nom":"Hôtel Jordaan"},{"value":"130","nom":"Appart avec vue canal"}],"restaurations":[{"value":"15","nom":"Café local"},{"value":"25","nom":"Restaurant Jordaan"},{"value":"20","nom":"Bar à bières"}],"activites":[{"value":"18","nom":"Visite musée"},{"value":"0","nom":"Balade quartier"},{"value":"20","nom":"Croisière"}],"transports":[{"value":"8","nom":"Tram"},{"value":"10","nom":"Vélo"},{"value":"10","nom":"Vélo"}],"prix":751.4}
-{"destination":"Amsterdam","dateDepart":"2025-05-01","dateRetour":"2025-05-08","nbAdultes":2,"nbEnfants":1,"logements":[{"value":"120","nom":"Hôtel centre-ville"},{"value":"110","nom":"Hôtel Jordaan"},{"value":"130","nom":"Appart avec vue canal"}],"restaurations":[{"value":"15","nom":"Café local"},{"value":"25","nom":"Restaurant Jordaan"},{"value":"20","nom":"Bar à bières"}],"activites":[{"value":"18","nom":"Visite musée"},{"value":"0","nom":"Balade quartier"},{"value":"20","nom":"Croisière"}],"transports":[{"value":"8","nom":"Tram"},{"value":"10","nom":"Vélo"},{"value":"10","nom":"Vélo"}],"prix":751.4}
-
-
-
+{
+  "tom@gmail.com":{
+    "Amsterdam":{
+        "destination": "Amsterdam",
+        "dateDepart": "2025-05-01",
+        "dateRetour": "2025-05-08",
+        "nbAdultes": 2,
+        "nbEnfants": 1,
+        "logements": [
+        { "value": "120", "nom": "Hôtel centre-ville" },
+        { "value": "110", "nom": "Hôtel Jordaan" },
+        { "value": "130", "nom": "Appart avec vue canal" }
+        ],
+        "restaurations": [
+        { "value": "15", "nom": "Café local" },
+        { "value": "25", "nom": "Restaurant Jordaan" },
+        { "value": "20", "nom": "Bar à bières" }
+        ],
+        "activites": [
+        { "value": "18", "nom": "Visite musée" },
+        { "value": "0", "nom": "Balade quartier" },
+        { "value": "20", "nom": "Croisière" }
+        ],
+        "transports": [
+        { "value": "8", "nom": "Tram" },
+        { "value": "10", "nom": "Vélo" },
+        { "value": "10", "nom": "Vélo" }
+        ],
+        "prix": 751.4
+    },
+    "Tokyo":{
+        "destination": "Amsterdam",
+        "dateDepart": "2025-05-01",
+        "dateRetour": "2025-05-08",
+        "nbAdultes": 2,
+        "nbEnfants": 1,
+        "logements": [
+        { "value": "120", "nom": "Hôtel centre-ville" },
+        { "value": "110", "nom": "Hôtel Jordaan" },
+        { "value": "130", "nom": "Appart avec vue canal" }
+        ],
+        "restaurations": [
+        { "value": "15", "nom": "Café local" },
+        { "value": "25", "nom": "Restaurant Jordaan" },
+        { "value": "20", "nom": "Bar à bières" }
+        ],
+        "activites": [
+        { "value": "18", "nom": "Visite musée" },
+        { "value": "0", "nom": "Balade quartier" },
+        { "value": "20", "nom": "Croisière" }
+        ],
+        "transports": [
+        { "value": "8", "nom": "Tram" },
+        { "value": "10", "nom": "Vélo" },
+        { "value": "10", "nom": "Vélo" }
+        ],
+        "prix": 751.4
+    }
+  },
+  "manfred@gmail.com":{
+    "destination": "Amsterdam",
+    "dateDepart": "2025-05-01",
+    "dateRetour": "2025-05-08",
+    "nbAdultes": 2,
+    "nbEnfants": 1,
+    "logements": [
+      { "value": "120", "nom": "Hôtel centre-ville" },
+      { "value": "110", "nom": "Hôtel Jordaan" },
+      { "value": "130", "nom": "Appart avec vue canal" }
+    ],
+    "restaurations": [
+      { "value": "15", "nom": "Café local" },
+      { "value": "25", "nom": "Restaurant Jordaan" },
+      { "value": "20", "nom": "Bar à bières" }
+    ],
+    "activites": [
+      { "value": "18", "nom": "Visite musée" },
+      { "value": "0", "nom": "Balade quartier" },
+      { "value": "20", "nom": "Croisière" }
+    ],
+    "transports": [
+      { "value": "8", "nom": "Tram" },
+      { "value": "10", "nom": "Vélo" },
+      { "value": "10", "nom": "Vélo" }
+    ],
+    "prix": 751.4
+  }
+}

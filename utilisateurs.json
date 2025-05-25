@@ -1,0 +1,20 @@
+[
+    {
+        "nom": "Monteiro",
+        "prenom": "Tom",
+        "naissance": "2025-05-13",
+        "adresse": "Pontoise",
+        "email": "tom@gmail.com",
+        "mdp": "0000",
+        "statut": "admin"
+    },
+    {
+        "nom": "Wallot",
+        "prenom": "Manfred",
+        "naissance": "2025-05-13",
+        "adresse": "pontoise",
+        "email": "manfred@gmail.com",
+        "mdp": "0000",
+        "statut": "utilisateur"
+    }
+]

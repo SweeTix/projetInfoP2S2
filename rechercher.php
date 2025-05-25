@@ -159,7 +159,7 @@
             </div>
             
             <div>
-                <form action="filtre_recherche.php" method="GET">
+                <form action="rechercher.php" method="GET">
                     <div class="recherche-haut">
                         <input type="search" name="q" placeholder="Rechercher...">
                         <button type="submit">Rechercher</button>

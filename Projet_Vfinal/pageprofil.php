@@ -80,9 +80,7 @@
                         <div class="field" id="field-email">
                             <label for="email">E-mail</label>
                             <input type="text" id="email" name="email" value="<?= isset($_SESSION["user_email"]) ? htmlspecialchars($_SESSION["user_email"]) : '' ?>" readonly data-original="<?= htmlspecialchars($_SESSION["user_email"] ?? '') ?>">
-                            <button type="button" onclick="editField('email')"><img src="stylo.png" alt="Stylo" width="40" height="40"></button>
-                            <button type="button" onclick="validateField('email')" hidden>Valider</button>
-                            <button type="button" onclick="cancelField('email')" hidden>Annuler</button>
+                            <button type="button">Non modifiable</button>
                         </div>
                         <div class="field" id="field-password">
                             <label for="password">Nom d'utilisateur</label>

@@ -1,16 +1,3 @@
-<script>
-   function changerValeur(button, valeur) {
-    const ul = button.closest('div');
-    const counter = ul.querySelector('.counter');
-    let current = parseInt(counter.textContent);
-
-    // Vérifie que la nouvelle valeur ne sera pas négative
-    if (current + valeur >= 0) {
-        counter.textContent = current + valeur;
-    }
-}
-</script>
-
 <div class="container">
     <div class="bloc_description_voyage">
         <h1> <?php echo $destination ; ?></h1>
@@ -32,8 +19,8 @@
             <h1>Les etapes du voyages</h1>
             <h1>Etape 0 : infos générales </h1>
             <p><b>Durée du séjour</b></p>
-            <p>Départ :</p>
-            <p>Retour :</p>
+            <p>Départ : <?= $date_depart ?></p>
+            <p>Retour : <?= $date_arrivee ?></p>
             <p>Informations sur les voyageurs</p>
             <div class="ligne">
                 <p>Adultes (+16)</p>
@@ -182,8 +169,8 @@
                 <div class="navigation-buttons">
                     <button onclick="prevDiv(this)" class="next">Précédent</button>
                 </div>
-                <button onclick="envoyerFormulaire(this)" class="next" style="background-color:rgb(255, 205, 96);"><b>enregistrer</b></button>
-                <button class="next"><a href="derniervoy.php">accéder au récapitulatif</a></button>
+                <button onclick="envoyerFormulaire(this),afficherBouton()" class="next" style="background-color:rgb(255, 205, 96);"><b>enregistrer</b></button>
+                <button class="next" id="cache" style="display: none;"><a href="derniervoy.php?destination=<?php echo urlencode($destination); ?>">accéder au récapitulatif</a></button>
             </div>
         </div>
 
@@ -200,6 +187,22 @@
 <script>
     const etapes = document.querySelectorAll('.etape');
     let currentIndex = 0;
+
+    function changerValeur(button, valeur) {
+        const ul = button.closest('div');
+        const counter = ul.querySelector('.counter');
+        let current = parseInt(counter.textContent);
+
+        // Vérifie que la nouvelle valeur ne sera pas négative
+        if (current + valeur >= 0) {
+            counter.textContent = current + valeur;
+        }
+    }
+
+    function afficherBouton() {
+        // On sélectionne le bouton et on le rend visible
+        document.getElementById('cache').style.display = 'inline-block';
+    }
 
     function nextDiv(button) {
         const bloc = button.closest('.bloc_p_voyage');

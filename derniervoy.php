@@ -57,6 +57,12 @@
         <div class="fond">
             <div class="bloc_p_voyage">
                 <?php
+                    if (isset($_GET['destination'])) {
+                        $destination = $_GET['destination'];
+                    } else {
+                        $destination = null; // ou une valeur par défaut
+                    }
+
                     $filename = 'preferences.json';
 
                     if (!file_exists($filename)) {
@@ -150,8 +156,8 @@
 
                     echo "<p>Prix total : {$prixVoyage} €</p>"; 
                 ?>  
-                <button class="btn_1">ajouter au panier</button>
-                <button class="btn_1">modifier le voyage </button>
+                <button class="btn_1"><a href="ajout_panier.php">ajouter au panier</a></button>
+                <button class="btn_1"><a href="attribution_voyage2.php?destination=<?php echo urlencode($destination); ?>">modifier le voyage</a></button>
             </div>
         </div>
         <div class="info">

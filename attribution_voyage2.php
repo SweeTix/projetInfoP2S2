@@ -144,6 +144,8 @@
                         $urlimage1       = $ligne["urlimage1"] ?? "";
                         $urlimage2       = $ligne["urlimage2"] ?? "";
                         $montant_final   = $ligne["montant_final"] ?? "";
+                        $date_depart   = $ligne["date_depart"] ?? "";
+                        $date_arrivee   = $ligne["date_arrivee"] ?? "";
 
                         // Transports
                         $transport1_e1 = $ligne["transport1_e1"] ?? "";

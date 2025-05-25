@@ -10,13 +10,21 @@
         <link rel="stylesheet" href="pagevoyage.css">
     </head>
     <body>
-        <style>            
-            .voyagedet {
-                color: white;
-                font-size: 30px;
+        <style>
+            .container{
                 display: flex;
                 justify-content: center;
                 margin-top: 5%;
+            }
+
+            .container h1 {
+                font-size: 60px;
+                color: rgb(255, 205, 96);
+            }
+
+            .container p{
+                font-size: 22px;
+                color: white;
             }
 
             .bloc_description_voyage {
@@ -24,23 +32,55 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 1);
                 border-radius: 8px;
                 width: 30%;
-                height: 600px;
+                padding: 10px;
             }
 
+            .bloc_description_voyage li{
+                list-style-type: none;
+                color: white;
+            }
+            
             .bloc_p_voyage{
                 background-color: rgba(9, 52, 28, 0.4);
                 box-shadow: 0 0 10px rgba(0, 0, 0, 1);
                 padding: 20px;
-                margin: 0px 20px;
                 border-radius: 8px;
                 width: 60%;
             }
 
-            .container{
+            .info_voy{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bloc_p_voyage form {
+                margin-top: 25px;
                 display: flex;
                 justify-content: center;
             }
-            
+
+            .next {
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.5);
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 8px;
+                font-size: 22px;
+                padding: 15px;
+                border: 1px solid #000;
+            }
+
+            .next:hover{
+                background-color: rgb(255, 205, 96);
+            }
+
+            .ligne {
+                gap: 5px;
+                color: white;
+                display: flex;
+                justify-content: center;
+            }
             .etape{
                 display: none;
             }
